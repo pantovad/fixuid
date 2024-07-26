@@ -49,6 +49,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        sudo apt-get update && sudo apt-get install -y hub
         assets=()
         for asset in fixuid-*-*-*.tar.gz; do
           assets+=("-a" "$asset")
