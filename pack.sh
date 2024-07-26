@@ -20,7 +20,7 @@ then
 fi
 
 for GOOS in linux; do
-    for GOARCH in amd64 arm64 mips64 mips64le ppc64 ppc64le riscv64; do
+    for GOARCH in amd64 arm64 s390x mips64 mips64le ppc64 ppc64le riscv64; do
         echo "packing $GOOS/$GOARCH" >&2
         export GOOS="$GOOS"
         export GOARCH="$GOARCH"
